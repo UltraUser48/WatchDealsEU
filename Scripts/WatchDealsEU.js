@@ -1,18 +1,10 @@
 /**
  * Created by UltraUSER on 8/21/2016.
  */
-/**
- * Created by UltraUSER on 8/21/2016.
- */
+
 const kinveyBaseUrl ="https://baas.kinvey.com/";
 const kinveyAppKey ="kid_ByzFBSP9";
 const kinveyAppSecret ="19643d0a834640ce8d8a9b22818b2a71";
-
-
-$("#login-nav").submit(function (e) {e.preventDefault(); login(); });
-$("#regform").submit(function (e) {e.preventDefault(); register(); });
-$("#butonche").submit(function (e) {e.preventDefault(); createOffer(); });
-
 
 function showInfo(message) {
     $('#infoBox').text(message);
@@ -23,6 +15,8 @@ function showError(errorMsg) {
     $('#errorBox').text("Error: " + errorMsg);
     $('#errorBox').show();
 }
+
+
 function login() {
     const kinveyLoginUrl = kinveyBaseUrl + "user/" + kinveyAppKey + "/login";
     const kinveyAuthHeaders = {
@@ -81,8 +75,6 @@ function login() {
     }
 
     function listOffers() {
-
-
         const kinveyOffersUrl = kinveyBaseUrl + "appdata/" + kinveyAppKey + "/Offers";
         const kinveyAuthHeaders = {
             'Authorization': "Kinvey " + sessionStorage.getItem('suthToken'),
