@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="Scripts/WatchDealsEU.js"></script>
     <style>
         .carousel-inner > .item > img,
         .carousel-inner > .item > a > img {
@@ -45,16 +46,15 @@
                     <li>
                         <div class="row">
                             <div class="col-md-12">
-                                Please enter Email and Password
+                                Please enter Username and Password
                                 <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
                                     <div class="form-group">
-                                        <label class="sr-only" for="exampleInputEmail2">Email</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email" required>
+                                        <label for="usr"></label>
+                                        <input type="text" class="form-control" id="usr" placeholder="Username" required>
                                     </div>
                                     <div class="form-group">
-                                        <label class="sr-only" for="exampleInputPassword2">Password</label>
-                                        <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
-                                        <div class="help-block text-right"><a href="">Forget the password ?</a></div>
+                                        <label for="pwd"></label>
+                                        <input type="password" class="form-control" id="pwd" placeholder="Password" required>
                                     </div>
                                     <div class="form-group">
                                         <button type="submit" class="btn btn-danger btn-block">Sign in</button>
@@ -73,11 +73,65 @@
         </ul>
     </div>
 </nav>
-
-<div class="container" id="h1">
-    <h3>Here are the latest News and Facts</h3>
-    <p> From the world of Timekeeping</p>
+<div class="jumbotron">
+    <div class="container text-center">
+        <h1>The Latest News</h1>
+        <p>From The World Of TimeKeeping</p>
+    </div>
 </div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="panel panel-primary">
+
+                <div class="panel-body"><img src="srcimages/rio2.jpg" class="img-responsive" style="width: 100%" alt="Image"></div>
+                <div class="panel-footer">What Did Athletes Wore At The 2016 Olympic Games In Rio.<a href="News3.html">More</a></div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="panel panel-danger">
+
+                <div class="panel-body"><img src="srcimages/gphc2.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+                <div class="panel-footer">The Grand Prix d’Horlogerie de Genève (GPHG)</div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="panel panel-success">
+
+                <div class="panel-body"><img src="srcimages/rd.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+                <div class="panel-footer">Roger Dubuis Excalibur Spider Limited Edition with White Rubber Strap</div>
+            </div>
+        </div>
+    </div>
+</div><br>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="panel panel-primary">
+
+                <div class="panel-body"><img src="srcimages/rado.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+                <div class="panel-footer">The Rado HyperChrome Small Second, With Ceramic Monobloc.<a href="News1.html">More</a></div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="panel panel-primary">
+
+                <div class="panel-body"><img src="srcimages/united.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+                <div class="panel-footer">Manchester United Are Joining TAG Heuer Watches Family</div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="panel panel-primary">
+
+                <div class="panel-body"><img src="srcimages/invicta.png" class="img-responsive" style="width:100%" alt="Image"></div>
+                <div class="panel-footer">Invicta Acquires Glycine.<a href="News2.html">More</a></div>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+
+<script src="Scripts/WatchDealsEU.js"></script>
 
 
 </body>

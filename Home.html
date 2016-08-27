@@ -9,15 +9,13 @@
     <script src="Scripts/jquery-3.0.0.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <script src="Scripts/WatchDealsEU.js"></script>
     <style>
         .carousel-inner > .item > img,
         .carousel-inner > .item > a > img {
             width: 500%;
             margin: auto;
-
         }
-    
+
     </style>
 </head>
 <body  id="b1">
@@ -41,15 +39,15 @@
             <li><a href="News.html">News</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="RegisterPage.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-            <li class="dropdown">
+            <li id="regLink"><a href="RegisterPage.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li  id="loginLink" class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
                 <ul id="login-dp" class="dropdown-menu">
                     <li>
                         <div class="row">
                             <div class="col-md-12">
                                 Please enter Username and Password
-                                <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                <form class="form" role="form" method="post" action="#" accept-charset="UTF-8" id="login-nav">
                                     <div class="form-group">
                                         <label for="usr"></label>
                                         <input type="text" class="form-control" id="usr" placeholder="Username" required>
@@ -125,7 +123,12 @@
 </div>
 <div id="footer">
     WebAppVersion 0.0.1
-</div>
+    <div class="form-group" onclick="document.getElementById('demo').innerHTML = Date()">
+        <button type="submit"   class="btn btn-danger btn-block"  id="time">Current Time</button>
+        <p id="demo"></p>
+    </div>
 
+</div>
+<script src="Scripts/WatchDealsEU.js"></script>
 </body>
 </html>

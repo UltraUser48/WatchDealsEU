@@ -13,6 +13,9 @@ body {
 #b4{
     background-image: url("srcimages/340.jpg")
 }
+#b10{
+    background-image: url("srcimages/default.jpg")
+}
 #h1 {
     color: #fbfeff;
     text-align: left;
@@ -73,7 +76,12 @@ body {
 #myCarousel {
     position: absolute;
     bottom: 100px;
-left: auto;
+left: 5%;
+}
+#myCarousel1 {
+    position: absolute;
+    top: 10px;
+    left: 40%;
 }
 #footer{
     position: fixed;
@@ -152,6 +160,12 @@ input::-webkit-input-placeholder {
     text-align: center;
 }
 
+#hr1, #hr2{
+    color: #ffffff;
+}
 
-
-
+#pagination{
+    position: fixed;
+    bottom: 0;
+    right: 50%;
+}
