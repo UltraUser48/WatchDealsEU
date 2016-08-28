@@ -6,6 +6,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="Scripts/jquery-3.0.0.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <style>
@@ -34,18 +36,18 @@
             </li>
             <li><a href="AboutUs.html">About Us</a></li>
             <li><a href="ViewOffers.html">View The Deals</a></li>
-            <li><a href="PostOffer.html">Post Offer</a></li>
+            <li id="posttheoffer" ><a href="PostOffer.html">Post Offer</a></li>
             <li><a href="News.html">News</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-            <li class="dropdown">
+            <li id="regLink"><a href="RegisterPage.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li  id="loginLink" class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
                 <ul id="login-dp" class="dropdown-menu">
                     <li>
                         <div class="row">
                             <div class="col-md-12">
-                                Please enter Email and Password
+                                Please enter Username and Password
                                 <form class="form" role="form" method="post" action="#" accept-charset="UTF-8" id="login-nav">
                                     <div class="form-group">
                                         <label for="usr"></label>
@@ -73,7 +75,6 @@
         </ul>
     </div>
 </nav>
-
 <div class="container" id="h1">
     <h3>Welcome to WatchDealsEU!</h3>
     <p>The Number One Place to Buy , Sell or Find Information about watches with History !</p>
@@ -136,13 +137,11 @@
     </div>
 </div>
 
-<script type="text/javascript" src="Scripts/bootstrap.js"></script>
+
 <script src="Scripts/WatchDealsEU.js"></script>
-</body>
-</html>
 <div id="footer">
     WebAppVersion 0.0.1
 </div>
-
 </body>
 </html>
+

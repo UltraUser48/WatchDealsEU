@@ -7,13 +7,9 @@ const kinveyAppSecret ="19643d0a834640ce8d8a9b22818b2a71";
 const kinveyAuthHeaders = {
     'Authorization': "Basic " + btoa(kinveyAppKey + ":" + kinveyAppSecret)
 };
-
-window.kinvey = {
-    kinveyBaseUrl,
-    kinveyAppKey,
-    kinveyAppSecret,
-    kinveyAuthHeaders
-};
+const guestUserHeader = {
+    'Authorization': 'Kinvey 42c87b2c-dcc6-4ec5-a43f-ecb464c25ea0.4D/KSMnjRMQRvENIEeSmGxKaxSY6+3MVyPygEMfu7T0='
+}
 
 function showInfo(message) {
     $('#infoBox').text(message);
@@ -35,7 +31,7 @@ function handleAjaxError(response) {
     if (response.responseJSON && response.responseJSON.description)
         errorMsg = response.responseJSON.description;
 
-        console.log("Fail", errorMsg);
+    console.log("Fail", errorMsg);
 
     // showError(errorMsg);
 }
@@ -62,23 +58,19 @@ function login(e) {
     function loginSuccess(response) {
         let userAuth = response._kmd.authtoken;
         sessionStorage.setItem('authToken', userAuth);
-
-
-        console.log("User logged in");
-
-        // showInfo('Login successful');
-        // ShowHomePage();
+        window.location.reload();
     }
 }
 function listOffers() {
     const kinveyOffersUrl = kinveyBaseUrl + "appdata/" + kinveyAppKey + "/Offers";
     const userAuthHeader = {
-        "Authorization": kinveyAuthHeaders.Authorization + "; Kinvey " + sessionStorage.authToken
+        "Authorization": "Kinvey " + sessionStorage.authToken
     };
+
     $.ajax({
         method: "GET",
         url: kinveyOffersUrl,
-        headers: userAuthHeader,
+        headers: isUserLoggedIn() ? userAuthHeader : guestUserHeader,
         success: loadOffersSuccess,
         error: handleAjaxError
     });
@@ -86,49 +78,63 @@ function listOffers() {
 
 
 
-        function loadOffersSuccess(Offers) {
-            showInfo('Offers loaded.');
-            if (Offers.length == 0) {
-                $('#Offers').text('No Offers to Display.');
-            } else {
-                let OffersTable = $('<table>')
-                    .append($('<tr>').append(
-                        '<th>Title</th>',
-                        '<th>FullName</th>',
-                        '<th>PhoneNumber</th>',
-                        '<th>Price</th>',
-                        '<th>Description</th>')
-                    );
-                for (let offer of Offers) {
-                    OffersTable.append($('<tr>').append(
-                        $('<td>').text(offer.Title),
-                        $('<td>').text(offer.FullName),
-                        $('<td>').text(offer.PhoneNumber),
-                        $('<td>').text(offer.Price),
-                        $('<td>').text(offer.Description))
-                    );
-                }
-                $('#Offers').append(OffersTable);
-            }
+function loadOffersSuccess(Offers) {
+    console.log('Offers loaded.');
+
+    if (Offers.length == 0) {
+        $('#Offers').text('No Offers to Display.');
+    } else {
+        // let OffersTable = $('<table>')
+        // .append($('<tr>').append(
+        //     '<th>Title</th>',
+        //     '<th>FullName</th>',
+        //     '<th>PhoneNumber</th>',
+        //     '<th>Price</th>',
+        //     '<th>Description</th>')
+        // );
+        for (let offer of Offers) {
+            $("#Offers").append([
+                '<div class="col-xs-4 offer">',
+                '   <h2 class="offer-title" ">' + offer.Title + '</h2>',
+                '   <div class="text-info offer-name">' + offer.FullName + '</div>',
+                '   <div class="text-info offer-description">' + offer.Description + '</div>',
+                '   <div class="row">',
+                '      <div class="col-xs-8 offer-phone">' + offer.PhoneNumber + '</div>',
+                '      <div class="col-xs-4 offer-price">' + offer.Price + '</div>',
+                '   </div>',
+                '</div>'
+            ].join(''));
+
+            // OffersTable.append($('<tr>').append(
+            //     $('<td>').text(offer.Title),
+            //     $('<td>').text(offer.FullName),
+            //     $('<td>').text(offer.PhoneNumber),
+            //     $('<td>').text(offer.Price),
+            //     $('<td>').text(offer.Description))
+            // );
+        }
+        // $('#Offers').append(OffersTable);
     }
+}
 
-    function logout() {
-        sessionStorage.clear();
-    }
+function logout() {
+    sessionStorage.clear();
+    window.location.reload()
+}
 
-    function ShowHomePage() {
-        let _that = this;
-        let templateUrl;
+function ShowHomePage() {
+    let _that = this;
+    let templateUrl;
 
-        $.get(templateUrl, function (template) {
-            let renderedWrapper = Mustache.render(template, null);
-            $(_that._wrapperSelector).html(renderedWrapper);
+    $.get(templateUrl, function (template) {
+        let renderedWrapper = Mustache.render(template, null);
+        $(_that._wrapperSelector).html(renderedWrapper);
 
-            $.get('Home.html', function (template) {
-                let rendered = Mustache.render(template, null);
-                $(_that._mainContentSelector).html(rendered);
-            })
+        $.get('Home.html', function (template) {
+            let rendered = Mustache.render(template, null);
+            $(_that._mainContentSelector).html(rendered);
         })
+    })
 
 }
 
@@ -223,5 +229,25 @@ function createOffer(e) {
 $("#register-form").on('submit', register);
 $("#login-nav").on('submit', login);
 $("#createOffer-form").on('submit', createOffer);
-$("#list").click(listOffers);
 
+var page = page || '';
+
+if (page === 'viewoffers') {
+    listOffers();
+}
+
+$(function () {
+    $navbar = $('.navbar-right');
+
+    if (isUserLoggedIn()) {
+        var logoutElement = $('<li><a href="Home.html">Log Out</a></li>');
+        logoutElement.on('click', logout);
+        $navbar.html(logoutElement);
+    }
+});
+
+$(function () {
+    if (isUserLoggedIn()){
+        $navbar = $('#posttheoffer').show();
+    }
+});

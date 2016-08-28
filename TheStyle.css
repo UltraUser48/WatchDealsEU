@@ -11,10 +11,13 @@ body {
     background-image: url("srcimages/240.jpg")
 }
 #b4{
-    background-image: url("srcimages/340.jpg")
+    background-image: url("srcimages/darki.jpg")
 }
 #b10{
     background-image: url("srcimages/default.jpg")
+}
+#b11{
+    background-image: url("srcimages/340.jpg")
 }
 #h1 {
     color: #fbfeff;
@@ -76,7 +79,7 @@ body {
 #myCarousel {
     position: absolute;
     bottom: 100px;
-left: 5%;
+    left: 5%;
 }
 #myCarousel1 {
     position: absolute;
@@ -168,4 +171,7 @@ input::-webkit-input-placeholder {
     position: fixed;
     bottom: 0;
     right: 50%;
+}
+#posttheoffer{
+    display: none;
 }

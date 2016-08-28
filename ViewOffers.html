@@ -6,6 +6,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="Scripts/jquery-3.0.0.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <style>
@@ -14,6 +16,22 @@
             width: 500%;
             margin: auto;
 
+        }
+    </style>
+    <style>
+        .offer-title {
+            background-color: white;
+        }
+    </style>
+    <style>
+        .offer-description , .offer-name, .offer-phone {
+            color: #ffffff;
+        }
+    </style>
+    <style>
+        .offer-price {
+            background: #778899;
+            color: #efff31;
         }
     </style>
 </head>
@@ -34,7 +52,7 @@
             </li>
             <li><a href="AboutUs.html">About Us</a></li>
             <li><a href="ViewOffers.html">View The Deals</a></li>
-            <li><a href="PostOffer.html">Post Offer</a></li>
+            <li id="posttheoffer" ><a href="PostOffer.html">Post Offer</a></li>
             <li><a href="News.html">News</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
@@ -72,29 +90,21 @@
         </ul>
     </div>
 </nav>
-<div class="form-group">
-    <button type="submit" class="btn btn-danger btn-block" id="list">List Offers</button>
-</div>
+
 <div class="container" id="h1">
     <h3>Here are the latest  posted offers </h3>
 </div>
 <div>
-    <table id="OffersTable">
+    <div id="Offers" class="container"></div>
+</div>
 
-    </table>
-</div>
-<div id="pagination">
-    <ul class="pagination">
-        <li><a href="#">1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">4</a></li>
-        <li><a href="#">5</a></li>
-    </ul>
-</div>
+
 <div id="footer">
     WebAppVersion 0.0.1
 </div>
+<script>
+    var page = "viewoffers";
+</script>
 <script src="Scripts/WatchDealsEU.js"></script>
 
 </body>
