@@ -175,3 +175,21 @@ input::-webkit-input-placeholder {
 #posttheoffer{
     display: none;
 }
+#infoBox1{
+    background: #ff4a00;
+    width: 80%;
+    margin: 10px auto;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    border-radius: 3px;
+    display: none;
+}
+#infoBox, #infoBox3, #infoBox4, #infoBox5, #infoBox6, #infoBox7 {
+    display: none;
+}
+
+#p1, #p2, #p3, #p4, #p5, #p6 {
+    color: #dddddd;
+}
+

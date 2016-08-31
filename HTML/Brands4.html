@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="../TheStyle.css">
+    <title>ByBrand</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="../Scripts/jquery-3.0.0.min.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <style>
+        .carousel-inner > .item > img,
+        .carousel-inner > .item > a > img {
+            width: 500%;
+            margin: auto;
+
+        }
+    </style>
+</head>
+<body >
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="Home.html">WatchDealsEU</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="Home.html">Home</a></li>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Info<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="bybrand.html">About Brands</a></li>
+                    <li><a href="AboutMechanisms.html">About Mechanisms</a></li>
+
+                </ul>
+            </li>
+            <li><a href="AboutUs.html">About Us</a></li>
+            <li><a href="ViewOffers.html">View The Deals</a></li>
+            <li id="posttheoffer" ><a href="PostOffer.html">Post Offer</a></li>
+            <li><a href="News.html">News</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="RegisterPage.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+                <ul id="login-dp" class="dropdown-menu">
+                    <li>
+                        <div class="row">
+                            <div class="col-md-12">
+                                Please enter Username and Password
+                                <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                    <div class="form-group">
+                                        <label for="usr"></label>
+                                        <input type="text" class="form-control" id="usr" placeholder="Username" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pwd"></label>
+                                        <input type="password" class="form-control" id="pwd" placeholder="Password" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-danger btn-block">Sign in</button>
+                                    </div>
+                                    <div class="checkbox">
+
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+<p id="p5">
+   The company was founded in 1881, when Kintarō Hattori opened a watch and jewelry shop called "K. Hattori" (服部時計店 Hattori Tokeiten?) in the Ginza area of Tokyo, Japan.<br> Eleven years later, in 1892, he began to produce clocks under the name Seikosha (精工舎 Seikōsha?), meaning roughly "House of Exquisite Workmanship". According to Seiko's official company history,<br> titled "A Journey In Time: The Remarkable Story of Seiko" (2003), Seiko is a Japanese word meaning "exquisite" or "success" ("exquisite" is usually written 精巧 from Chinese jīngqiǎo, while the meaning <br>"success" is usually written 成功 from Chinese chénggōng)
+        The first watches produced under the Seiko brand appeared in 1924. In 1969, Seiko introduced the Astron, the world's first production quartz watch<br>when it was introduced, it cost the same as a medium-sized car. Seiko later went on to introduce the first quartz chronograph. In the late 1980s, Seiko produced the first Kinetic watch that combined<br> the self-energizing attributes of an automatic watch with quartz accuracy. The watch is entirely powered by its movement in everyday wear.
+        In 1985, Orient and Seiko established a joint factory.
+</p>
+<div class="alert alert-success" id="infoBox">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> You have logged in.
+</div>
+<section id="infoBox1" onclick='$(this).fadeOut()'>You Have Successfully Logged Out</section>
+
+<script src="../Scripts/WatchDealsEU.js"></script>
+</body>
+</html>

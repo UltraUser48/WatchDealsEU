@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="../TheStyle.css">
+    <title>News</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="../Scripts/jquery-3.0.0.min.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <style>
+        .carousel-inner > .item > img,
+        .carousel-inner > .item > a > img {
+            width: 500%;
+            margin: auto;
+
+        }
+    </style>
+</head>
+<body  id="b3">
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="Home.html">WatchDealsEU</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="Home.html">Home</a></li>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Info<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="bybrand.html">About Brands</a></li>
+                    <li><a href="AboutMechanisms.html">About Mechanisms</a></li>
+
+                </ul>
+            </li>
+            <li><a href="AboutUs.html">About Us</a></li>
+            <li><a href="ViewOffers.html">View The Deals</a></li>
+            <li id="posttheoffer" ><a href="PostOffer.html">Post Offer</a></li>
+            <li><a href="News.html">News</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="RegisterPage.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+                <ul id="login-dp" class="dropdown-menu">
+                    <li>
+                        <div class="row">
+                            <div class="col-md-12">
+                                Please enter Username and Password
+                                <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                    <div class="form-group">
+                                        <label for="usr"></label>
+                                        <input type="text" class="form-control" id="usr" placeholder="Username" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pwd"></label>
+                                        <input type="password" class="form-control" id="pwd" placeholder="Password" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-danger btn-block">Sign in</button>
+                                    </div>
+                                    <div class="checkbox">
+
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="alert alert-success" id="infoBox">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> You have logged in.
+</div>
+<section id="infoBox1" onclick='$(this).fadeOut()'>You Have Successfully Logged Out</section>
+<div class="jumbotron">
+    <div class="container text-center">
+        <h1>The Latest News</h1>
+        <p>From The World Of TimeKeeping</p>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="panel panel-primary">
+
+                <div class="panel-body"><img src="../srcimages/rio2.jpg" class="img-responsive" style="width: 100%" alt="Image"></div>
+                <div class="panel-footer">What Did Athletes Wore At The 2016 Olympic Games In Rio.<a href="News3.html">More</a></div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="panel panel-danger">
+
+                <div class="panel-body"><img src="../srcimages/gphc2.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+                <div class="panel-footer">The Grand Prix d’Horlogerie de Genève (GPHG)</div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="panel panel-success">
+
+                <div class="panel-body"><img src="../srcimages/rd.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+                <div class="panel-footer">Roger Dubuis Excalibur Spider Limited Edition with White Rubber Strap</div>
+            </div>
+        </div>
+    </div>
+</div><br>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="panel panel-primary">
+
+                <div class="panel-body"><img src="../srcimages/rado.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+                <div class="panel-footer">The Rado HyperChrome Small Second, With Ceramic Monobloc.<a href="News1.html">More</a></div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="panel panel-primary">
+
+                <div class="panel-body"><img src="../srcimages/united.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+                <div class="panel-footer">Manchester United Are Joining TAG Heuer Watches Family</div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="panel panel-primary">
+
+                <div class="panel-body"><img src="../srcimages/invicta.png" class="img-responsive" style="width:100%" alt="Image"></div>
+                <div class="panel-footer">Invicta Acquires Glycine.<a href="News2.html">More</a></div>
+            </div>
+        </div>
+    </div>
+</div><br><br>
+
+<script src="../Scripts/WatchDealsEU.js"></script>
+
+
+</body>
+</html>

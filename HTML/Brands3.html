@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="TheStyle.css">
-    <title>News</title>
+    <link rel="stylesheet" type="text/css" href="../TheStyle.css">
+    <title>ByBrand</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <script src="Scripts/jquery-3.0.0.min.js"></script>
-    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="../Scripts/jquery-3.0.0.min.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <style>
@@ -19,7 +19,7 @@
         }
     </style>
 </head>
-<body  id="b3">
+<body >
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -61,9 +61,7 @@
                                         <button type="submit" class="btn btn-danger btn-block">Sign in</button>
                                     </div>
                                     <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox"> keep me logged-in
-                                        </label>
+
                                     </div>
                                 </form>
 
@@ -74,66 +72,16 @@
         </ul>
     </div>
 </nav>
-<div class="jumbotron">
-    <div class="container text-center">
-        <h1>The Latest News</h1>
-        <p>From The World Of TimeKeeping</p>
-    </div>
+   <p id="p4">
+Rolex SA is a Swiss luxury watchmaker. The company and its subsidiary Montres Tudor SA design, manufacture, distribute and service wristwatches sold under the Rolex and Tudor brands. <br>Founded by Hans Wilsdorf and Alfred Davis in London, England in 1905 as Wilsdorf and Davis, Rolex moved its base of operations to Geneva, Switzerland in 1919.<br>
+        Forbes ranked Rolex No.64 on its 2016 list of the world's most powerful global brands. Rolex is the largest single luxury watch brand, producing about 2,000 watches per day<br>with estimated 2012 revenues of US$7.7 billion
+   </p>
+<div class="alert alert-success" id="infoBox">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> You have logged in.
 </div>
-<div class="container">
-    <div class="row">
-        <div class="col-sm-4">
-            <div class="panel panel-primary">
+<section id="infoBox1" onclick='$(this).fadeOut()'>You Have Successfully Logged Out</section>
 
-                <div class="panel-body"><img src="srcimages/rio2.jpg" class="img-responsive" style="width: 100%" alt="Image"></div>
-                <div class="panel-footer">What Did Athletes Wore At The 2016 Olympic Games In Rio.<a href="News3.html">More</a></div>
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="panel panel-danger">
-
-                <div class="panel-body"><img src="srcimages/gphc2.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-                <div class="panel-footer">The Grand Prix d’Horlogerie de Genève (GPHG)</div>
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="panel panel-success">
-
-                <div class="panel-body"><img src="srcimages/rd.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-                <div class="panel-footer">Roger Dubuis Excalibur Spider Limited Edition with White Rubber Strap</div>
-            </div>
-        </div>
-    </div>
-</div><br>
-
-<div class="container">
-    <div class="row">
-        <div class="col-sm-4">
-            <div class="panel panel-primary">
-
-                <div class="panel-body"><img src="srcimages/rado.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-                <div class="panel-footer">The Rado HyperChrome Small Second, With Ceramic Monobloc.<a href="News1.html">More</a></div>
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="panel panel-primary">
-
-                <div class="panel-body"><img src="srcimages/united.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-                <div class="panel-footer">Manchester United Are Joining TAG Heuer Watches Family</div>
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="panel panel-primary">
-
-                <div class="panel-body"><img src="srcimages/invicta.png" class="img-responsive" style="width:100%" alt="Image"></div>
-                <div class="panel-footer">Invicta Acquires Glycine.<a href="News2.html">More</a></div>
-            </div>
-        </div>
-    </div>
-</div><br><br>
-
-<script src="Scripts/WatchDealsEU.js"></script>
-
-
+<script src="../Scripts/WatchDealsEU.js"></script>
 </body>
 </html>

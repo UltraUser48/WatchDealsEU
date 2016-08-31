@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="TheStyle.css">
-    <title>AboutUs</title>
+    <link rel="stylesheet" type="text/css" href="../TheStyle.css">
+    <title>AboutMechanisms</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <script src="Scripts/jquery-3.0.0.min.js"></script>
-    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="../Scripts/jquery-3.0.0.min.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <style>
@@ -57,37 +57,46 @@
                                         <label for="pwd"></label>
                                         <input type="password" class="form-control" id="pwd" placeholder="Password" required>
                                     </div>
-                                    <div class="form-group">
-                                        <button type="submit" class="btn btn-danger btn-block">Sign in</button>
-                                    </div>
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox"> keep me logged-in
-                                        </label>
-                                    </div>
-                                </form>
+                                    <div class="help-block text-right"><a href="">Forget the password ?</a></div>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-danger btn-block">Sign in</button>
+                            </div>
+                            <div class="checkbox">
 
                             </div>
+                            </form>
+
                         </div>
-                </ul>
-            </li>
-        </ul>
+    </ul>
+    </li>
+    </ul>
     </div>
 </nav>
-
-<div class="container" id="h1">
-    <h3>Welcome to WatchDealsEU!</h3>
-    <p>We are a one of the fastest growing websites about online Watch deals</p>
-        <p>And also news about the latest <q><i>Mechanical</i></q> or<q><i>Quartz</i></q> masterpieces on the market!</p>
-    <p>You can call us at : <span class="glyphicon glyphicon-earphone"></span> 0882746911</p>
-    <p>You can email us at : <span class="glyphicon glyphicon-envelope"></span> Arsenal4life95@gmail.com</p>
-    <p>You can find us at : </p>
+<div class="alert alert-success" id="infoBox">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> You have logged in.
 </div>
+<section id="infoBox1" onclick='$(this).fadeOut()'>You Have Successfully Logged Out</section>
+<div>
+    <h1 id="hr1">Mechanical Movement</h1>
+    <h3 id="hr2">
+        Mechanical movements are often chosen over quartz movements for luxury watches because of the level of quality<br> and craftsmanship of mechanical movements. Skillfully created by expert watchmakers, these movements contain<br>  an intricate series of tiny components working together to power the timepiece. Although the general design of <br> mechanical watches hasn’t changed much in centuries, technology has allowed for more precise engineering <br> and a greater attention-to-detail.
 
+        How a Mechanical Movement Works:
+        Unlike quartz movements, a mechanical movement <br>  uses energy from a wound spring, rather than a battery, to power the watch. This spring stores energy and transfers <br> it through a series of gears and springs, regulating the release of energy to power the watch.
+        <br><strong>The Right clock animation below displays Mechanical Movement</strong>
+
+    </h3>
+</div>
+<div>
+    <img src="../srcimages/watch-movement-loop.gif" class="img-rounded" alt="Cinque Terre" width="604" height="156">
+</div>
 <div id="footer">
     WebAppVersion 0.0.1
 </div>
-<script src="Scripts/WatchDealsEU.js"></script>
-
+</div>
+</div>
+<script src="../Scripts/WatchDealsEU.js"></script>
 </body>
 </html>

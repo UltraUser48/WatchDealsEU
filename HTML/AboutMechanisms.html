@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="TheStyle.css">
-    <title>ByBrand</title>
+    <link rel="stylesheet" type="text/css" href="../TheStyle.css">
+    <title>AboutMechanisms</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <script src="Scripts/jquery-3.0.0.min.js"></script>
-    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="../Scripts/jquery-3.0.0.min.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <style>
@@ -57,13 +57,13 @@
                                         <label for="pwd"></label>
                                         <input type="password" class="form-control" id="pwd" placeholder="Password" required>
                                     </div>
+                                        <div class="help-block text-right"><a href="">Forget the password ?</a></div>
+                                    </div>
                                     <div class="form-group">
                                         <button type="submit" class="btn btn-danger btn-block">Sign in</button>
                                     </div>
                                     <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox"> keep me logged-in
-                                        </label>
+
                                     </div>
                                 </form>
 
@@ -74,72 +74,43 @@
         </ul>
     </div>
 </nav>
-
+<div class="alert alert-success" id="infoBox">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> You have logged in.
+</div>
+<section id="infoBox1" onclick='$(this).fadeOut()'>You Have Successfully Logged Out</section>
 <div class="container" id="h1">
 
     <div class="container-fluid text-center bg-grey">
-        <h2>It's up to you </h2>
-        <h4>Here are the most popular brands</h4>
+        <h2>These are the types of movements</h2>
+        <h4>Choose carefully</h4>
         <div class="row text-center">
             <div class="col-sm-4">
                 <div class="thumbnail" >
-                    <a href="Home.html">
-                        <img src="srcimages/70.jpg" alt="Brietling">
+                    <a href="MechanicalMovement.html">
+                        <img src="../srcimages/160.jpg" alt="Brietling">
                     </a>
-                    <p  id="text1"><strong>Brietling</strong></p>
+                    <p  id="text1"><strong>Mechanical Movement</strong></p>
 
                 </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-4" >
                 <div class="thumbnail">
-                    <a href="Home.html">
-                        <img src="srcimages/80.jpg" alt="Casio">
+                    <a href="QuartzMovement.html">
+                        <img src="../srcimages/150.jpg" alt="Casio">
                     </a>
-                    <p  id="text2"><strong>Casio</strong></p>
+                    <p  id="text2"><strong> Quartz Movement</strong></p>
 
                 </div>
             </div>
-            <div class="col-sm-4">
-                <div class="thumbnail">
-                    <a href="Home.html">
-                        <img src="srcimages/100.jpg" alt="Tag Heuer">
-                    </a>
-                    <p  id="text3"><strong>Tag Heuer</strong></p>
 
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="thumbnail">
-                    <a href="Home.html">
-                        <img src="srcimages/90.jpg" alt="Rolex">
-                    </a>
-                    <p id="text4"><strong>Rolex</strong></p >
-
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="thumbnail">
-                    <a href="Home.html">
-                        <img src="srcimages/120.jpg" alt="Seiko">
-                    </a>
-                    <p id="text5"><strong>Seiko</strong></p>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="thumbnail">
-                    <a href="Home.html">
-                        <img src="srcimages/130.jpg" alt="Omega">
-                    </a>
-                    <p  id="text6"><strong>Omega</strong></p>
-
-                </div>
             </div>
         </div>
-<div id="footer">
-    WebAppVersion 0.0.1
-</div>
-</div>
+        <div id="footer">
+            WebAppVersion 0.0.1
+        </div>
     </div>
-<script src="Scripts/WatchDealsEU.js"></script>
+</div>
+<script src="../Scripts/WatchDealsEU.js"></script>
 </body>
 </html>

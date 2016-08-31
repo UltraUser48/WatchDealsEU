@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="TheStyle.css">
+    <link rel="stylesheet" type="text/css" href="../TheStyle.css">
     <title>AboutMechanisms</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <script src="Scripts/jquery-3.0.0.min.js"></script>
-    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="../Scripts/jquery-3.0.0.min.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <style>
@@ -63,22 +63,22 @@
                                 <button type="submit" class="btn btn-danger btn-block">Sign in</button>
                             </div>
                             <div class="checkbox">
-                                <label>
-                                    <input type="checkbox"> keep me logged-in
-                                </label>
+
                             </div>
                             </form>
 
                         </div>
-
-    </div>
 
     </ul>
     </li>
     </ul>
     </div>
 </nav>
-
+<div class="alert alert-success" id="infoBox">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> You have logged in.
+</div>
+<section id="infoBox1" onclick='$(this).fadeOut()'>You Have Successfully Logged Out</section>
 <div>
     <h1 id="hr1">Quartz Movement</h1>
     <h3 id="hr2">
@@ -93,13 +93,13 @@
 
     </div>
 <div>
-    <img src="srcimages/watch-movement-loop.gif" class="img-rounded" alt="Movement" width="604" height="156">
+    <img src="../srcimages/watch-movement-loop.gif" class="img-rounded" alt="Movement" width="604" height="156">
 </div>
     <div id="footer">
         WebAppVersion 0.0.1
     </div>
 </div>
 </div>
-<script src="Scripts/WatchDealsEU.js"></script>
+<script src="../Scripts/WatchDealsEU.js"></script>
 </body>
 </html>

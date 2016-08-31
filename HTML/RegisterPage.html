@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="../TheStyle.css">
+    <title>BestWatchAds</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="../Scripts/jquery-3.0.0.min.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <style>
+        .carousel-inner > .item > img,
+        .carousel-inner > .item > a > img {
+            width: 500%;
+            margin: auto;
+
+        }
+    </style>
+</head>
+<body id="b2" >
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="Home.html">WatchDealsEU</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="Home.html">Home</a></li>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Info<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="bybrand.html">About Brands</a></li>
+                    <li><a href="AboutMechanisms.html">About Mechanisms</a></li>
+
+                </ul>
+            </li>
+            <li><a href="AboutUs.html">About Us</a></li>
+            <li><a href="ViewOffers.html">View The Deals</a></li>
+            <li id="posttheoffer" ><a href="PostOffer.html">Post Offer</a></li>
+            <li><a href="News.html">News</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li id="regLink"><a href="RegisterPage.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li  id="loginLink" class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+                <ul id="login-dp" class="dropdown-menu">
+                    <li>
+                        <div class="row">
+                            <div class="col-md-12">
+                                Please enter Username and Password
+                                <form class="form" role="form" method="post" action="#" accept-charset="UTF-8" id="login-nav">
+                                    <div class="form-group">
+                                        <label for="usr"></label>
+                                        <input type="text" class="form-control" id="usr" placeholder="Username" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pwd"></label>
+                                        <input type="password" class="form-control" id="pwd" placeholder="Password" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit"   class="btn btn-danger btn-block" id="button">Sign in</button>
+
+                                    </div>
+                                    <div class="checkbox">
+
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="alert alert-success" id="infoBox">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> You have logged in.
+</div>
+<div class="alert alert-success" id="infoBox6">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> You have Successfully Registered To WatchDealsEU!.
+</div>
+<section id="infoBox1" onclick='$(this).fadeOut()'>You Have Successfully Logged Out</section>
+<div class="container" id="h1">
+    <div class="alert alert-danger" id="infoBox3">
+        <strong>Error!</strong> Passwords dont match!.
+    </div>
+    <div class="alert alert-danger" id="infoBox4">
+        <strong>Error!</strong> Fill out empty entries.
+    </div>
+    <div class="alert alert-danger" id="infoBox5">
+        <strong>Error!</strong> Username has to be at least 5 symbols .
+    </div>
+    <h3>Welcome to WatchDealsEU!</h3>
+    <p>The Number One Place to Buy , Sell or Find Information about watches with History !</p>
+</div>
+<div class="container">
+    <div class="row main">
+        <div class="panel-heading">
+            <div class="panel-title text-center">
+                <h1 class="title">Enter Information</h1>
+                <hr />
+            </div>
+        </div>
+        <div class="main-login main-center">
+            <form class="form-horizontal" method="post" action="#" id="register-form">
+
+                <div class="form-group">
+                    <label for="name" class="cols-sm-2 control-label">Your Name</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="username" class="cols-sm-2 control-label">Username</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="username" id="username"  placeholder="Enter your Username"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="cols-sm-2 control-label">Password</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                            <input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                            <input type="password" class="form-control" name="confirm" id="confirm"  placeholder="Confirm your Password"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group ">
+                    <button type="submit" class="btn btn-danger btn-lg btn-block login-button">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<script src="../Scripts/WatchDealsEU.js"></script>
+<div id="footer">
+    WebAppVersion 0.0.1
+</div>
+</body>
+</html>
+

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="../TheStyle.css">
+    <title>BestWatchAds</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="../Scripts/jquery-3.0.0.min.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <style>
+        .carousel-inner > .item > img,
+        .carousel-inner > .item > a > img {
+            width: 100%;
+            margin: auto;
+
+        }
+    </style>
+    <style>
+        textarea {
+            width: 20%;
+            height: 150px;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            background-color: #cccccc;
+            font-size: 16px;
+            resize: none;
+        }
+    </style>
+    <style>
+        #h5,#h6,#h7,#h8,#h9 {
+            color: white;
+
+        }
+    </style>
+    <style>
+        input[type=text] {
+            width: 15%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: navy;
+            background-color: #dddddd;
+            color: white;
+        }
+    </style>
+</head>
+<body  id="b11">
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="Home.html">WatchDealsEU</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="Home.html">Home</a></li>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Info<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="bybrand.html">About Brands</a></li>
+                    <li><a href="AboutMechanisms.html">About Mechanisms</a></li>
+
+                </ul>
+            </li>
+            <li><a href="AboutUs.html">About Us</a></li>
+            <li><a href="ViewOffers.html">View The Deals</a></li>
+            <li id="posttheoffer" ><a href="PostOffer.html">Post Offer</a></li>
+            <li><a href="News.html">News</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li id="regLink"><a href="RegisterPage.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li  id="loginLink" class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+                <ul id="login-dp" class="dropdown-menu">
+                    <li>
+                        <div class="row">
+                            <div class="col-md-12">
+                                Please enter Username and Password
+                                <form class="form" role="form" method="post" action="#" accept-charset="UTF-8" id="login-nav">
+                                    <div class="form-group">
+                                        <label for="usr"></label>
+                                        <input type="text" class="form-control" id="usr" placeholder="Username" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pwd"></label>
+                                        <input type="password" class="form-control" id="pwd" placeholder="Password" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit"   class="btn btn-danger btn-block" id="button">Sign in</button>
+
+                                    </div>
+                                    <div class="checkbox">
+
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="alert alert-success" id="infoBox">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> You have logged in.
+</div>
+<div class="alert alert-success" id="infoBox7">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> You have Successfully Created an Offer.
+</div>
+<section id="infoBox1" onclick='$(this).fadeOut()'>You Have Successfully Logged Out</section>
+<div class="alert alert-danger" id="infoBox4">
+    <strong>Error!</strong> Fill out empty entries.
+</div>
+
+<div class="container" id="h1">
+    <h3> <strong>Create an Offer in Under ONE minute!</strong></h3>
+
+</div>
+<form class="form-container" id="createOffer-form">
+    <div class="form-title"> Offer Title</div>
+    <input class="form-field" id="OfferTitle" type="text" name="title" /><br />
+    <div class="form-title"> Your Full Name</div>
+    <input class="form-field" id="OfferFullName" type="text" name="name" /><br />
+    <div class="form-title"> Your Phone Number</div>
+    <input class="form-field" id="OfferPhoneNumber" type="text" name="pnumber" /><br />
+    <div class="form-title"> The Price</div>
+    <input class="form-field" id="OfferPrice" type="text" name="price" /><br />
+    <div class="form-title">Description</div>
+    <textarea id="OfferDescription">My Watch is..</textarea><br />
+    <button type="submit" class="btn btn-success">Post Offer</button>
+</form>
+<div id="footer">
+    WebAppVersion 0.0.1
+</div>
+<script src="../Scripts/WatchDealsEU.js"></script>
+</body>
+</html>
